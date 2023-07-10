@@ -76,10 +76,9 @@ define(['N/record', 'N/redirect', 'N/render', 'N/runtime', 'N/search'],
         /**
          * Get the Work Order MAIN Fields
          * @param {int} woId work order Id
-         * @param {string} companyName
          * @return {{tranid: *, item: *, dateCreated: *, printDate: string, location: *}}
          */
-        function getMainFields(woId, companyName) {
+        function getMainFields(woId) {
             try {
                 const workOrderRec = record.load({
                     type: record.Type.WORK_ORDER,

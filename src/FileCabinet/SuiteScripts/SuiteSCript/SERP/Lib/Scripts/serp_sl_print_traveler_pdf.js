@@ -26,13 +26,13 @@ define(["N/record","N/runtime","N/https", "../serp_lib_template_handler", "../se
                 try {
                     let data = {}
 
-                    const companyRec = record.load({
-                        type: "customrecord_serp_company",
-                        id: runtime.getCurrentScript().getParameter("custscript_serp_company_name")
-                    })
-                    const companyName = companyRec.getValue("custrecord_serp_company_name")
+                    // const companyRec = record.load({
+                    //     type: "customrecord_serp_company",
+                    //     id: runtime.getCurrentScript().getParameter("custscript_serp_company_name")
+                    // })
+                    // const companyName = companyRec.getValue("custrecord_serp_company_name")
                     const operationColumns = lib_print_helper.getExistingOperations(workOrderId)
-                    data.mainFields = lib_print_helper.getMainFields(workOrderId,companyName)
+                    data.mainFields = lib_print_helper.getMainFields(workOrderId)
                     data.operations = operationColumns
                     const xmlFileId = lib_print_helper.getFileId(XMLTemplate)
                     if(!data.operations.length < 0){
