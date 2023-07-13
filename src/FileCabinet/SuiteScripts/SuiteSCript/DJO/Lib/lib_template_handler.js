@@ -12,8 +12,10 @@ define(['N/file', 'N/xml', 'N/render'],
 
         /**
          * Build XMLDoc file from template with content Data
-         * @param {*} objFile
+         * @param templateID
          * @param {*} content
+         * @param fileName
+         * @param outputFolder
          * @returns
          */
         function buildFileFromTemplate(templateID, content, fileName, outputFolder) {

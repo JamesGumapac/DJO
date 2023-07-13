@@ -26,8 +26,8 @@ function(currentRecord, url) {
 
 
         var suiteletURL = url.resolveScript({
-            scriptId:'customscript_serp_sl_print_traveler_pdf',//Please make sure to replace this with the script ID of your Suitelet
-            deploymentId: 'customdeploy_serp_sl_print_traveler_pdf',//Please make sure to replace this with the deployment ID of your Suitelet
+            scriptId:'customscript_sl_print_traveler_pdf',//Please make sure to replace this with the script ID of your Suitelet
+            deploymentId: 'customdeploy_sl_print_traveler_pdf',//Please make sure to replace this with the deployment ID of your Suitelet
             params: {
                 'recId':woId,
 

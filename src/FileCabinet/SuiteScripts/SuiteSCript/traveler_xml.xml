@@ -16,7 +16,7 @@
     <macrolist>
         <macro id="nlheader">
             <table class="header" style="width: 100%;"><tr>
-	<td colspan="5"><strong><span class="nameandaddress">${record.mainFields.companyName}</span></strong></td>
+	<td colspan="5"><strong><span class="nameandaddress">${companyInformation.custrecord_company_traveller_pdf}</span></strong></td>
 	<td colspan="4">&nbsp;</td>
 	<td align="right" colspan="4" rowspan="2"><strong>Manufacturing Traveler</strong></td>
 	<td align="right" colspan="5" rowspan="2">Work Order:${record.mainFields.tranid}<br /><barcode codetype="code128" showtext="false" value="${record.mainFields.tranid}"/></td>

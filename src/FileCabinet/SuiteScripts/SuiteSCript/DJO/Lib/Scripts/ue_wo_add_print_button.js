@@ -2,7 +2,7 @@
  * @NApiVersion 2.1
  * @NScriptType UserEventScript
  */
-define(["../serp_lib_print_traveler.js"],
+define(["../lib_print_traveler.js"],
 
     (lib_helper) => {
         /**
@@ -15,7 +15,7 @@ define(["../serp_lib_print_traveler.js"],
          * @since 2015.2
          */
         const beforeLoad = (context) => {
-            const csScriptId = "serp_cs_wo_print_traveler.js"
+            const csScriptId = "cs_wo_print_traveler.js"
             const form = context.form
             const record = context.newRecord
             const recId = record.id

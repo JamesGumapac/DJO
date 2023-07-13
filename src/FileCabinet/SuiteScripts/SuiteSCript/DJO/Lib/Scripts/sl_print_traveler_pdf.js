@@ -2,7 +2,7 @@
  * @NApiVersion 2.1
  * @NScriptType Suitelet
  */
-define(["N/record","N/runtime","N/https", "../serp_lib_template_handler", "../serp_lib_print_traveler"],
+define(["N/record","N/runtime","N/https", "../lib_template_handler", "../lib_print_traveler"],
     /**
      * @param record
      * @param runtime
@@ -21,16 +21,12 @@ define(["N/record","N/runtime","N/https", "../serp_lib_template_handler", "../se
         const onRequest = (context) => {
             const objRequest = context.request;
             const workOrderId = parseInt(objRequest.parameters.recId);
-            const XMLTemplate = "serp_traveler_xml.xml"
+            const XMLTemplate = "traveler_xml.xml"
             if (context.request.method === "GET") {
                 try {
                     let data = {}
 
-                    // const companyRec = record.load({
-                    //     type: "customrecord_serp_company",
-                    //     id: runtime.getCurrentScript().getParameter("custscript_serp_company_name")
-                    // })
-                    // const companyName = companyRec.getValue("custrecord_serp_company_name")
+
                     const operationColumns = lib_print_helper.getExistingOperations(workOrderId)
                     data.mainFields = lib_print_helper.getMainFields(workOrderId)
                     data.operations = operationColumns
